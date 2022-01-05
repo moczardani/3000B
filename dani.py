@@ -9,8 +9,32 @@ def van_pozitiv(l):
             return True
     return False
 
+def legkisebb(l):
+    min = l[0]
+    for i in l:
+        if i<min:
+            min = i
+    return min
+
+def harmincharom(l):
+    index = 0
+    for i in l:
+        if i%33 == 0:
+            return index
+        index += 1
+
+def atlagfele(l):
+    osszeg = 0
+    for i in l:
+        osszeg+=i
+    return (osszeg/len(l))/2
+
 print(f'1. Van-e a sorozatban pozitiv szam: {"van" if van_pozitiv(lista) else "nincs"}')
 
 print(f'2. Hany eleme van a sorozatnak: {len(lista)}')
 
+print(f'3. Mennyi a sorozatban található legkisebb szám?: {legkisebb(lista)}')
 
+print(f'4. Írjuk ki az első 33-mal osztható szám indexét!: {harmincharom(lista)}')
+
+print(f'Mennyi a sorozatban található számok átlagának a fele?: {atlagfele(lista)}')
