@@ -29,6 +29,12 @@ def atlagfele(l):
         osszeg+=i
     return (osszeg/len(l))/2
 
+def minden_szam_pozitiv(l):
+    for i in l:
+        if i <= 0:
+            return False
+    return True
+
 print(f'1. Van-e a sorozatban pozitiv szam: {"van" if van_pozitiv(lista) else "nincs"}')
 
 print(f'2. Hany eleme van a sorozatnak: {len(lista)}')
@@ -37,4 +43,6 @@ print(f'3. Mennyi a sorozatban található legkisebb szám?: {legkisebb(lista)}'
 
 print(f'4. Írjuk ki az első 33-mal osztható szám indexét!: {harmincharom(lista)}')
 
-print(f'Mennyi a sorozatban található számok átlagának a fele?: {atlagfele(lista)}')
+print(f'5. Mennyi a sorozatban található számok átlagának a fele?: {atlagfele(lista)}')
+
+print(f'6. Igaz-e, hogy minden szám pozitív? {"Igaz" if minden_szam_pozitiv(lista) else "Hamis"}')
